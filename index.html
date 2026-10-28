@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Rwanda with KABENDERA Tour Ltd.">
+  <title>KABENDERA Tour Ltd. | Discover Rwanda</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#home">
+      <span class="logo-icon">K</span>
+      <span>KABENDERA <small>TOUR LTD.</small></span>
+    </a>
+
+    <button class="menu-toggle" id="menu-toggle"
+      aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <nav id="navigation">
+      <a href="destination.html">Destinations</a>
+      <a href="experiences.html">Experiences</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="Tour_package.html">Tour packages</a>
+      <a class="nav-button" href="#booking">Book a trip ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">WELCOME TO THE LAND OF A THOUSAND HILLS</p>
+        <h1>Discover Rwanda.<br><em>Feel the wonder.</em></h1>
+        <p>
+          From mountain gorillas to the beautiful shores of Lake Kivu,
+          discover extraordinary experiences with KABENDERA Tour Ltd.
+        </p>
+        <a href="#destinations" class="button">Explore Rwanda ↗</a>
+      </div>
+      <div class="hero-caption">NATURE · CULTURE · ADVENTURE</div>
+    </section>
+
+    <section class="section intro">
+      <p class="eyebrow">TRAVEL WITH MEANING</p>
+      <h2>Your journey, <em>your story.</em></h2>
+      <p class="section-description">
+        Discover Rwanda at your own pace. Explore beautiful landscapes,
+        learn about local culture and create memories worth sharing.
+      </p>
+    </section>
+
+    <section class="section destinations" id="destinations">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">EXPLORE RWANDA</p>
+          <h2>Places to <em>fall in love with.</em></h2>
+        </div>
+      </div>
+
+      <div class="card-grid">
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=80"
+            alt="African wilderness and green landscapes">
+          <div class="card-content">
+            <span>WILDLIFE</span>
+            <h3>Gorilla Trekking</h3>
+            <p>Explore the Volcanoes region and learn about mountain gorilla conservation.</p>
+            <a href="#booking" data-interest="Gorilla trekking">Plan this experience ↗</a>
+          </div>
+        </article>
+
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80"
+            alt="Peaceful blue lake water">
+          <div class="card-content">
+            <span>LAKESIDE ESCAPE</span>
+            <h3>Lake Kivu, Rubavu</h3>
+            <p>Enjoy the lakeside atmosphere, scenic views and relaxed time on Rwanda's western shore.</p>
+            <a href="#booking" data-interest="Lake Kivu in Rubavu">Explore Lake Kivu ↗</a>
+          </div>
+        </article>
+
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80"
+            alt="Sunlight filtering through a green forest">
+          <div class="card-content">
+            <span>NATURE</span>
+            <h3>Nyungwe Forest</h3>
+            <p>Discover a remarkable rainforest environment and its biodiversity.</p>
+            <a href="#booking" data-interest="Nyungwe Forest">Discover the forest ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="experience section" id="experiences">
+      <p class="eyebrow">MAKE IT MEMORABLE</p>
+      <h2>Experiences beyond <em>the ordinary.</em></h2>
+
+      <div class="experience-grid">
+        <article>
+          <span class="experience-number">01</span>
+          <h3>Wildlife adventures</h3>
+          <p>Ask us about guided wildlife experiences and gorilla trekking arrangements.</p>
+        </article>
+        <article>
+          <span class="experience-number">02</span>
+          <h3>Lake & leisure</h3>
+          <p>Slow down in Rubavu and discover the beauty of Lake Kivu.</p>
+        </article>
+        <article>
+          <span class="experience-number">03</span>
+          <h3>Custom journeys</h3>
+          <p>Combine destinations and experiences to suit your interests and schedule.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="hotels">
+      <p class="eyebrow">REST & RECHARGE</p>
+      <h2>Find your place <em>to stay.</em></h2>
+      <p class="section-description">
+        Looking for a lakeside hotel, a comfortable guesthouse or accommodation
+        near your chosen activities? Tell us what you need and ask about options.
+      </p>
+      <a href="#booking" class="button">Ask about accommodation ↗</a>
+      <p class="disclaimer">
+        Accommodation options, prices and availability must be confirmed before booking.
+      </p>
+    </section>
+
+    <section class="section packages" id="packages">
+      <p class="eyebrow">YOUR NEXT ADVENTURE</p>
+      <h2>Tour ideas to <em>inspire you.</em></h2>
+
+      <div class="package-grid">
+        <article class="package">
+          <p class="eyebrow">WILDLIFE</p>
+          <h3>Gorillas & Green Hills</h3>
+          <p>A nature-focused journey in Rwanda's mountain region.</p>
+          <a href="#booking" data-interest="Gorillas & Green Hills">Request an itinerary ↗</a>
+        </article>
+        <article class="package featured">
+          <p class="eyebrow">LAKE & LEISURE</p>
+          <h3>Lake Kivu Escape</h3>
+          <p>Discover Rubavu and make time for a peaceful lakeside stay.</p>
+          <a href="#booking" data-interest="Lake Kivu Escape">Request an itinerary ↗</a>
+        </article>
+        <article class="package">
+          <p class="eyebrow">DISCOVERY</p>
+          <h3>Rwanda Highlights</h3>
+          <p>Build a journey around nature, culture and scenic destinations.</p>
+          <a href="#booking" data-interest="Rwanda Highlights">Request an itinerary ↗</a>
+        </article>
+      </div>
+      <p class="disclaimer">
+        These are sample itinerary concepts, not fixed-price offers or confirmed reservations.
+      </p>
+    </section>
+
+    <section class="booking section" id="booking">
+      <div class="booking-intro">
+        <p class="eyebrow">LET'S PLAN YOUR TRIP</p>
+        <h2>Tell us about <em>your dream.</em></h2>
+        <p>Share your travel plans. We'll use your details to prepare an enquiry message.</p>
+      </div>
+
+      <form id="booking-form">
+        <div class="form-row">
+          <label>Full name *
+            <input name="name" required minlength="2" placeholder="Your name">
+          </label>
+          <label>Email address *
+            <input name="email" type="email" required placeholder="you@example.com">
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label>Experience *
+            <select name="interest" required>
+              <option value="">Choose an experience</option>
+              <option>Gorilla trekking</option>
+              <option>Lake Kivu in Rubavu</option>
+              <option>Nyungwe Forest</option>
+              <option>Hotel accommodation</option>
+              <option>Gorillas & Green Hills</option>
+              <option>Lake Kivu Escape</option>
+              <option>Rwanda Highlights</option>
+              <option>Custom itinerary</option>
+            </select>
+          </label>
+          <label>Number of travellers
+            <select name="travellers">
+              <option>Not decided</option>
+              <option>1 traveller</option>
+              <option>2 travellers</option>
+              <option>3–5 travellers</option>
+              <option>6–10 travellers</option>
+              <option>11+ travellers</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label>Preferred travel date
+            <input name="date" id="travel-date" type="date">
+          </label>
+          <label>Trip duration
+            <select name="duration">
+              <option>Not decided</option>
+              <option>Day trip</option>
+              <option>2–3 days</option>
+              <option>4–7 days</option>
+              <option>8+ days</option>
+            </select>
+          </label>
+        </div>
+
+        <label>Additional details
+          <textarea name="message" rows="4"
+            placeholder="Tell us about your interests, budget or special requests."></textarea>
+        </label>
+
+        <label class="consent">
+          <input type="checkbox" name="consent" required>
+          <span>I agree that my details can be used to respond to this enquiry. *</span>
+        </label>
+
+        <button class="button" type="submit">Prepare my enquiry ↗</button>
+        <p class="form-note">
+          This front-end demo does not automatically send or save bookings.
+          You can copy your prepared enquiry or open it in your email app.
+        </p>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <a class="logo footer-logo" href="#home">
+        <span class="logo-icon">K</span>
+        <span>KABENDERA <small>TOUR LTD.</small></span>
+      </a>
+      <p>Discover Rwanda.<br>Travel with meaning.</p>
+      <a href="#booking">Plan your journey ↗</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> KABENDERA Tour Ltd.</span>
+      <span>Rwanda · Land of a Thousand Hills</span>
+    </div>
+  </footer>
+
+  <dialog id="enquiry-dialog">
+    <button type="button" id="close-dialog" class="close-dialog"
+      aria-label="Close">×</button>
+    <p class="eyebrow">YOUR ENQUIRY</p>
+    <h2>Your trip starts <em>here.</em></h2>
+    <p class="dialog-note">Review your message, copy it, or open your email app to send it.</p>
+    <textarea id="enquiry-message" rows="11" readonly
+      aria-label="Prepared enquiry message"></textarea>
+    <div class="dialog-buttons">
+      <button class="button" id="copy-enquiry" type="button">Copy message</button>
+      <a class="button button-outline" id="email-enquiry" href="#">Open email app ↗</a>
+    </div>
+    <p id="copy-status" role="status"></p>
+  </dialog>
+</body>
+<script src="destinations.js"></script>
+</html>
