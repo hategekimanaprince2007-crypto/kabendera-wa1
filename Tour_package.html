@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tour Packages | KABENDERA Tour Ltd.</title>
+
+    <link rel="stylesheet" href="tour-packages.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="package-header">
+        <a href="index.html" class="package-logo">
+            KABENDERA TOUR LTD.
+        </a>
+
+        <a href="index.html" class="package-back">
+            Back to Home
+        </a>
+    </header>
+
+    <!-- Hero section -->
+    <section class="package-hero">
+        <div class="package-hero-content">
+            <span>DISCOVER THE LAND OF A THOUSAND HILLS</span>
+
+            <h1>Our Tour Packages</h1>
+
+            <p>
+                Discover Rwanda through unforgettable wildlife,
+                cultural, adventure, and relaxation experiences.
+            </p>
+
+            <a href="#packages" class="package-hero-button">
+                Explore Packages
+            </a>
+        </div>
+    </section>
+
+    <!-- Tour packages -->
+    <main class="package-container" id="packages">
+
+        <div class="package-heading">
+            <h2>Choose Your Adventure</h2>
+            <p>
+                Find a tour package that matches your interests
+                and travel plans.
+            </p>
+        </div>
+
+        <!-- Filters -->
+        <div class="package-filters">
+
+            <input
+                type="search"
+                id="package-search"
+                placeholder="Search tour packages..."
+                aria-label="Search tour packages"
+            >
+
+            <select id="package-category" aria-label="Filter by category">
+                <option value="all">All Packages</option>
+                <option value="wildlife">Wildlife</option>
+                <option value="safari">Safari</option>
+                <option value="relaxation">Relaxation</option>
+                <option value="cultural">Cultural</option>
+            </select>
+
+        </div>
+
+        <div class="package-grid">
+
+            <!-- Package 1 -->
+            <article class="package-card" data-category="wildlife">
+
+                <img
+                    src="Gorilla Family in Misty Rainforest.png"
+                    alt="Mountain gorillas in a rainforest"
+                >
+
+                <div class="package-card-content">
+
+                    <span class="package-tag">Wildlife</span>
+
+                    <h3>Gorilla Trekking Adventure</h3>
+
+                    <p class="package-location">
+                        Volcanoes National Park
+                    </p>
+
+                    <p>
+                        Experience the beauty of mountain gorillas
+                        in their natural habitat.
+                    </p>
+
+                    <div class="package-info">
+                        <span>3 Days</span>
+                        <span>Guided Tour</span>
+                    </div>
+
+                    <div class="package-bottom">
+                        <div>
+                            <small>Illustrative price</small>
+                            <h4>From $1,200</h4>
+                        </div>
+
+                        <button
+                            class="package-details"
+                            data-package="gorilla"
+                        >
+                            View Details
+                        </button>
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- Package 2 -->
+            <article class="package-card" data-category="safari">
+
+                <img
+                    src="tour3.jpeg"
+                    alt="Wildlife safari experience"
+                >
+
+                <div class="package-card-content">
+
+                    <span class="package-tag">Safari</span>
+
+                    <h3>Wildlife Safari</h3>
+
+                    <p class="package-location">
+                        Akagera National Park
+                    </p>
+
+                    <p>
+                        Discover wildlife, beautiful landscapes,
+                        and exciting game drives.
+                    </p>
+
+                    <div class="package-info">
+                        <span>2 Days</span>
+                        <span>Game Drive</span>
+                    </div>
+
+                    <div class="package-bottom">
+                        <div>
+                            <small>Illustrative price</small>
+                            <h4>From $450</h4>
+                        </div>
+
+                        <button
+                            class="package-details"
+                            data-package="safari"
+                        >
+                            View Details
+                        </button>
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- Package 3 -->
+            <article class="package-card" data-category="relaxation">
+
+                <img
+                    src="tour1.jpeg"
+                    alt="Scenic Rwanda travel destination"
+                >
+
+                <div class="package-card-content">
+
+                    <span class="package-tag">Relaxation</span>
+
+                    <h3>Lake Kivu Escape</h3>
+
+                    <p class="package-location">
+                        Lake Kivu
+                    </p>
+
+                    <p>
+                        Relax beside the lake and enjoy the beautiful
+                        scenery and optional boat trips.
+                    </p>
+
+                    <div class="package-info">
+                        <span>2 Days</span>
+                        <span>Lakeside Trip</span>
+                    </div>
+
+                    <div class="package-bottom">
+                        <div>
+                            <small>Illustrative price</small>
+                            <h4>From $250</h4>
+                        </div>
+
+                        <button
+                            class="package-details"
+                            data-package="kivu"
+                        >
+                            View Details
+                        </button>
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- Package 4 -->
+            <article class="package-card" data-category="cultural">
+
+                <img
+                    src="tour2.jpeg"
+                    alt="Rwanda cultural travel experience"
+                >
+
+                <div class="package-card-content">
+
+                    <span class="package-tag">Cultural</span>
+
+                    <h3>Rwanda Cultural Tour</h3>
+
+                    <p class="package-location">
+                        Kigali
+                    </p>
+
+                    <p>
+                        Learn about Rwandan culture, history,
+                        traditions, and city attractions.
+                    </p>
+
+                    <div class="package-info">
+                        <span>1 Day</span>
+                        <span>City Tour</span>
+                    </div>
+
+                    <div class="package-bottom">
+                        <div>
+                            <small>Illustrative price</small>
+                            <h4>From $100</h4>
+                        </div>
+
+                        <button
+                            class="package-details"
+                            data-package="culture"
+                        >
+                            View Details
+                        </button>
+                    </div>
+
+                </div>
+            </article>
+
+        </div>
+
+        <p id="package-empty" hidden>
+            No tour packages match your search.
+            Please try another search.
+        </p>
+
+        <!-- Package details -->
+        <section
+            id="package-panel"
+            class="package-panel"
+            hidden
+            aria-live="polite"
+        >
+
+            <button id="package-close" type="button">
+                Close &times;
+            </button>
+
+            <h2 id="package-detail-title">Package Details</h2>
+
+            <p id="package-detail-description"></p>
+
+            <h3>Included activities</h3>
+
+            <ul id="package-activities"></ul>
+
+            <p id="package-detail-price"></p>
+
+            <a
+                id="package-booking"
+                href="index.html#booking"
+            >
+                Book This Package
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="package-footer">
+        <p>&copy; 2026 KABENDERA Tour Ltd.</p>
+        <p>Discover Rwanda. Create unforgettable memories.</p>
+    </footer>
+
+    <script src="tour-packages.js"></script>
+
+</body>
+</html>

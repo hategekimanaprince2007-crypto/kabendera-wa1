@@ -1,0 +1,382 @@
+<style>
+.hotels-section {
+  padding: 90px 6%;
+  background: #f7f8f5;
+  color: #26382f;
+}
+
+.hotels-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hotels-section .eyebrow {
+  color: #9b8047;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.hotels-section h2 {
+  color: #173d32;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.hotels-section h2 em {
+  color: #9b8047;
+  font-style: italic;
+}
+
+.hotels-intro {
+  max-width: 680px;
+  margin: 20px 0 30px;
+  color: #69766d;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Search and filter */
+
+.hotel-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 30px 0 15px;
+}
+
+.hotel-controls input,
+.hotel-controls select {
+  min-height: 48px;
+  padding: 12px 15px;
+  border: 1px solid #d8dfd8;
+  border-radius: 5px;
+  background: #fff;
+  color: #26382f;
+  font: inherit;
+  outline: none;
+}
+
+.hotel-controls input {
+  flex: 1 1 250px;
+  min-width: 0;
+}
+
+.hotel-controls select {
+  flex: 0 1 230px;
+}
+
+.hotel-controls input:focus,
+.hotel-controls select:focus {
+  border-color: #9b8047;
+  box-shadow: 0 0 0 3px #9b804720;
+}
+
+.hotel-count {
+  margin: 15px 0;
+  color: #69766d;
+  font-size: 13px;
+}
+
+/* Hotel cards */
+
+.hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.hotel-card {
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e7eae5;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px #173d320a;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hotel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px #173d3218;
+}
+
+.hotel-card > a:first-child {
+  display: block;
+  overflow: hidden;
+}
+
+.hotel-card img {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.hotel-card:hover img {
+  transform: scale(1.04);
+}
+
+.hotel-content {
+  padding: 22px;
+}
+
+.hotel-category {
+  color: #9b8047;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.hotel-content h3 {
+  margin: 12px 0;
+  color: #173d32;
+  font-size: 21px;
+  line-height: 1.4;
+}
+
+.hotel-location {
+  margin: 0 0 12px;
+  color: #9b8047;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hotel-content p:not(.hotel-location) {
+  color: #737d74;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.hotel-button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 15px;
+  background: #173d32;
+  border: 1px solid #173d32;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.hotel-button:hover {
+  background: #9b8047;
+  border-color: #9b8047;
+  color: #fff;
+}
+
+.no-hotels {
+  padding: 25px 0;
+  color: #69766d;
+  text-align: center;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .hotel-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .hotels-section {
+    padding: 70px 5%;
+  }
+}
+
+/* Phone */
+
+@media (max-width: 560px) {
+  .hotel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hotels-section {
+    padding: 55px 5%;
+  }
+
+  .hotel-card img {
+    height: 240px;
+  }
+
+  .hotel-content {
+    padding: 18px;
+  }
+
+  .hotel-controls {
+    flex-direction: column;
+  }
+
+  .hotel-controls input,
+  .hotel-controls select {
+    width: 100%;
+    flex: auto;
+  }
+}
+</style>
+
+<!-- HOTELS SECTION -->
+<section class="hotels-section" id="hotels">
+  <div class="hotels-container">
+
+    <p class="eyebrow">STAY BY LAKE KIVU</p>
+
+    <h2>Discover Hotels in <em>Rubavu.</em></h2>
+
+    <p class="hotels-intro">
+      Find your perfect stay in Rubavu, Rwanda. Explore lakeside resorts,
+      comfortable hotels and welcoming accommodation for your next trip.
+    </p>
+
+    <!-- SEARCH AND FILTER -->
+    <div class="hotel-controls">
+      <input
+        type="search"
+        id="hotelSearch"
+        placeholder="Search hotels..."
+        aria-label="Search hotels by name or location"
+      >
+
+      <select id="hotelFilter" aria-label="Filter hotels by type">
+        <option value="all">All accommodation</option>
+        <option value="luxury">Luxury hotels</option>
+        <option value="resort">Resorts</option>
+        <option value="comfort">Comfort hotels</option>
+      </select>
+    </div>
+
+    <p id="hotelCount" class="hotel-count" aria-live="polite"></p>
+
+    <div class="hotel-grid" id="hotelGrid">
+
+      <!-- HOTEL 1 -->
+      <article class="hotel-card"
+        data-name="Lake Kivu Serena Hotel"
+        data-type="luxury"
+        data-location="Gisenyi Rubavu Lake Kivu">
+
+        <a href="https://www.serenahotels.com/"
+           target="_blank" rel="noopener noreferrer">
+          <img src="selena.png"
+               alt="Lake Kivu Serena Hotel in Rubavu"
+               loading="lazy">
+        </a>
+
+        <div class="hotel-content">
+          <span class="hotel-category">LAKESIDE LUXURY</span>
+          <h3>Lake Kivu Serena Hotel</h3>
+          <p class="hotel-location">📍 Gisenyi, Rubavu</p>
+          <p>
+            An upscale lakeside hotel with a private beach,
+            swimming pool and facilities for relaxation.
+          </p>
+          <a class="hotel-button"
+             href="https://www.serenahotels.com/"
+             target="_blank" rel="noopener noreferrer">
+            Visit Hotel Website ↗
+          </a>
+        </div>
+      </article>
+
+      <!-- HOTEL 2 -->
+      <article class="hotel-card"
+        data-name="Kivu Paradis Resort"
+        data-type="resort"
+        data-location="Nyamyumba Gisenyi Rubavu Lake Kivu">
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Kivu+Paradis+Resort+Rubavu"
+           target="_blank" rel="noopener noreferrer">
+          <img src="paradise.png"
+               alt="Kivu Paradis Resort near Lake Kivu"
+               loading="lazy">
+        </a>
+
+        <div class="hotel-content">
+          <span class="hotel-category">LAKE KIVU RESORT</span>
+          <h3>Kivu Paradis Resort</h3>
+          <p class="hotel-location">📍 Nyamyumba, Rubavu</p>
+          <p>
+            A lakeside retreat for visitors looking for
+            relaxation, local food and lake activities.
+          </p>
+          <a class="hotel-button"
+             href="https://www.google.com/maps/search/?api=1&query=Kivu+Paradis+Resort+Rubavu"
+             target="_blank" rel="noopener noreferrer">
+            View Location ↗
+          </a>
+        </div>
+      </article>
+
+      <!-- HOTEL 3 -->
+      <article class="hotel-card"
+        data-name="Hill View Hotel Lake Kivu"
+        data-type="comfort"
+        data-location="Gisenyi Rubavu Lake Kivu">
+
+        <a href="https://www.hillviewhotelrwanda.com/"
+           target="_blank" rel="noopener noreferrer">
+          <img src="HILLS.png"
+               alt="Hill View Hotel Lake Kivu in Rubavu"
+               loading="lazy">
+        </a>
+
+        <div class="hotel-content">
+          <span class="hotel-category">COMFORT & BUSINESS</span>
+          <h3>Hill View Hotel Lake Kivu</h3>
+          <p class="hotel-location">📍 Gisenyi, Rubavu</p>
+          <p>
+            Accommodation with lake views, dining and facilities
+            suitable for leisure and business visitors.
+          </p>
+          <a class="hotel-button"
+             href="https://www.hillviewhotelrwanda.com/"
+             target="_blank" rel="noopener noreferrer">
+            Visit Hotel Website ↗
+          </a>
+        </div>
+      </article>
+
+      <!-- HOTEL 4 -->
+      <article class="hotel-card"
+        data-name="Kivu Peace View Hotel"
+        data-type="comfort"
+        data-location="Gisenyi Rubavu Lake Kivu">
+
+        <a href="https://www.kivupeaceviewhotel.com/"
+           target="_blank" rel="noopener noreferrer">
+          <img src="Peace.png"
+               alt="Kivu Peace View Hotel in Rubavu"
+               loading="lazy">
+        </a>
+
+        <div class="hotel-content">
+          <span class="hotel-category">COMFORT & RELAXATION</span>
+          <h3>Kivu Peace View Hotel</h3>
+          <p class="hotel-location">📍 Gisenyi, Rubavu</p>
+          <p>
+            A welcoming hotel offering different room types,
+            Wi-Fi, a restaurant and a convenient base for exploring Rubavu.
+          </p>
+          <a class="hotel-button"
+             href="https://www.kivupeaceviewhotel.com/"
+             target="_blank" rel="noopener noreferrer">
+            View Rooms & Prices ↗
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+    <p id="noHotels" class="no-hotels" hidden>
+      No hotels match your search. Try another name or category.
+    </p>
+
+  </div>
+</section>

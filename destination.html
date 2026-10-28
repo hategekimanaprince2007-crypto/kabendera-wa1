@@ -1,0 +1,548 @@
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f8f6;
+    color: #26352e;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header */
+.destination-header {
+    background: #064641;
+    color: white;
+    padding: 18px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.destination-logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.destination-back {
+    color: white;
+    background: #e4a83a;
+    padding: 10px 18px;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.destination-back:hover {
+    background: #f3bd58;
+    color: #0b5d48;
+    transform: translateY(-2px);
+}
+
+/* Main container */
+.destination-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 0 60px;
+}
+
+/* Hero section */
+.destination-hero {
+    min-height: 330px;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("Gorilla Family in Misty Rainforest.png")
+        center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 35px;
+    margin-bottom: 45px;
+}
+
+.destination-hero-link {
+    color: white;
+    max-width: 750px;
+}
+
+.destination-hero h1 {
+    font-size: clamp(30px, 5vw, 52px);
+    margin: 0 0 15px;
+    line-height: 1.2;
+}
+
+.destination-hero p {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Section heading */
+.destination-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.destination-heading h2 {
+    color: #1b6b43;
+    font-size: clamp(26px, 4vw, 36px);
+    margin: 0 0 8px;
+}
+
+.destination-heading p {
+    color: #65736b;
+    margin: 0;
+}
+
+/* Search and category filters */
+.destination-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.destination-filters input,
+.destination-filters select {
+    width: 100%;
+    max-width: 320px;
+    padding: 13px 15px;
+    border: 1px solid #cbd8ce;
+    border-radius: 8px;
+    background: white;
+    color: #26352e;
+    font-size: 15px;
+    outline: none;
+}
+
+.destination-filters input:focus,
+.destination-filters select:focus {
+    border-color: #268453;
+    box-shadow: 0 0 0 3px rgba(38, 132, 83, 0.12);
+}
+
+/* Destination cards grid */
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* Individual destination card */
+.destination-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #e0e8e2;
+    box-shadow: 0 5px 18px rgba(21, 59, 39, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(21, 59, 39, 0.16);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.destination-card:hover img {
+    transform: scale(1.04);
+}
+
+.destination-content {
+    padding: 20px;
+}
+
+.destination-tag {
+    display: inline-block;
+    background: #e3f3e8;
+    color: #17653a;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.destination-content h3 {
+    color: #123d2b;
+    font-size: 21px;
+    margin: 0 0 8px;
+}
+
+.destination-location {
+    color: #6b776f;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.destination-content p {
+    color: #59665e;
+    font-size: 15px;
+    margin: 0 0 18px;
+}
+
+.destination-details {
+    display: inline-block;
+    background: #17653a;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 11px 17px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.destination-details:hover {
+    background: #0d4728;
+    transform: translateY(-2px);
+}
+
+.destination-details:focus-visible,
+.destination-back:focus-visible,
+.destination-hero-link:focus-visible {
+    outline: 3px solid #e4a83a;
+    outline-offset: 3px;
+}
+
+/* No search results */
+#destination-empty {
+    text-align: center;
+    padding: 30px 15px;
+    color: #65736b;
+    background: white;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Destination details panel */
+#destination-panel {
+    background: white;
+    border: 1px solid #dce8df;
+    border-radius: 14px;
+    padding: 28px;
+    margin-top: 40px;
+    box-shadow: 0 8px 25px rgba(21, 59, 39, 0.1);
+    scroll-margin-top: 25px;
+}
+
+#destination-panel h2 {
+    color: #123d2b;
+    margin: 0 0 10px;
+}
+
+#destination-detail-location {
+    color: #65736b;
+    margin-bottom: 15px;
+}
+
+#destination-detail-description {
+    color: #46544b;
+}
+
+#destination-activities {
+    padding-left: 22px;
+    margin-bottom: 25px;
+}
+
+#destination-activities li {
+    padding: 5px 0;
+}
+
+#destination-close {
+    float: right;
+    background: #e9efea;
+    color: #26352e;
+    border: none;
+    border-radius: 7px;
+    padding: 8px 13px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#destination-close:hover {
+    background: #d6e2d8;
+}
+
+#destination-booking {
+    display: inline-block;
+    background: #e4a83a;
+    color: #173c2a;
+    padding: 12px 20px;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+#destination-booking:hover {
+    background: #f3bd58;
+}
+
+/* Footer */
+.destination-footer {
+    background: #123d2b;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 20px;
+}
+
+.destination-footer p {
+    margin: 5px 0;
+}
+
+/* Tablet screens */
+@media (max-width: 900px) {
+    .destination-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .destination-container {
+        width: 92%;
+    }
+
+    .destination-hero {
+        min-height: 280px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+    .destination-header {
+        padding: 16px 5%;
+    }
+
+    .destination-logo {
+        font-size: 20px;
+    }
+
+    .destination-container {
+        width: 92%;
+        padding-top: 22px;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .destination-card img {
+        height: 230px;
+    }
+
+    .destination-hero {
+        min-height: 250px;
+        padding: 22px;
+        margin-bottom: 32px;
+    }
+
+    .destination-hero p {
+        font-size: 16px;
+    }
+
+    .destination-filters {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .destination-filters input,
+    .destination-filters select {
+        max-width: none;
+    }
+
+    #destination-panel {
+        padding: 20px;
+    }
+
+    #destination-close {
+        float: none;
+        margin-bottom: 15px;
+    }
+}
+</style>
+<body>
+
+<header class="destination-header">
+  <a href="index.html" class="destination-logo">KABENDERA <span>TOUR LTD.</span></a>
+  <a href="index.html" class="destination-back">Main Website</a>
+</header>
+
+<main class="destination-container">
+
+  <section class="destination-hero">
+    <span>DISCOVER THE LAND OF A THOUSAND HILLS</span>
+    <h1>Explore Rwanda's Destinations</h1>
+    <p>
+      From mountain gorillas and green rainforests to beautiful lakes
+      and exciting wildlife safaris, discover a destination for every journey.
+    </p>
+    <a href="#destination-list" class="destination-hero-link">
+      Discover destinations ↓
+    </a>
+  </section>
+
+  <section id="destination-list">
+    <div class="destination-heading">
+      <span>YOUR NEXT ADVENTURE</span>
+      <h2>Popular Destinations</h2>
+      <p>Choose a destination and start planning your Rwanda experience.</p>
+    </div>
+
+    <div class="destination-filters">
+      <input type="search" id="destination-search"
+        placeholder="Search destinations..."
+        aria-label="Search destinations">
+
+      <select id="destination-category" aria-label="Filter destinations">
+        <option value="all">All destinations</option>
+        <option value="wildlife">Wildlife & Safari</option>
+        <option value="nature">Nature & Adventure</option>
+        <option value="lake">Lake & Leisure</option>
+        <option value="culture">Culture & City</option>
+      </select>
+    </div>
+
+    <div class="destination-grid" id="destination-grid">
+
+      <article class="destination-card" data-category="wildlife">
+        <img src="Gorilla Family in Misty Rainforest.png"
+          alt="Mountain gorillas in a misty rainforest" loading="lazy">
+        <div class="destination-content">
+          <span class="destination-tag">WILDLIFE</span>
+          <h3>Volcanoes National Park</h3>
+          <p class="destination-location">Musanze, Northern Rwanda</p>
+          <p>Discover mountain gorillas, bamboo forests, and volcanic scenery.</p>
+          <button class="destination-details" data-destination="volcanoes">
+            Explore destination →
+          </button>
+        </div>
+      </article>
+
+      <article class="destination-card" data-category="lake">
+        <img src="tour1.jpeg"
+          alt="Lake Kivu and its surrounding hills" loading="lazy">
+        <div class="destination-content">
+          <span class="destination-tag">LAKE & LEISURE</span>
+          <h3>Lake Kivu</h3>
+          <p class="destination-location">Rubavu and Western Rwanda</p>
+          <p>Enjoy lakeside views, boat trips, and peaceful relaxation.</p>
+          <button class="destination-details" data-destination="kivu">
+            Explore destination →
+          </button>
+        </div>
+      </article>
+
+      <article class="destination-card" data-category="wildlife">
+        <img src="tour4.jpeg"
+          alt="Wildlife safari scenery" loading="lazy">
+        <div class="destination-content">
+          <span class="destination-tag">WILDLIFE & SAFARI</span>
+          <h3>Akagera National Park</h3>
+          <p class="destination-location">Eastern Rwanda</p>
+          <p>Explore savannah scenery and discover wildlife on safari.</p>
+          <button class="destination-details" data-destination="akagera">
+            Explore destination →
+          </button>
+        </div>
+      </article>
+
+      <article class="destination-card" data-category="nature">
+        <img src="tour3.jpeg"
+          alt="Nyungwe rainforest" loading="lazy">
+        <div class="destination-content">
+          <span class="destination-tag">NATURE & ADVENTURE</span>
+          <h3>Nyungwe National Park</h3>
+          <p class="destination-location">Southern Rwanda</p>
+          <p>Experience rainforest biodiversity, forest trails, and canopy walks.</p>
+          <button class="destination-details" data-destination="nyungwe">
+            Explore destination →
+          </button>
+        </div>
+      </article>
+
+      <article class="destination-card" data-category="culture">
+        <img src="tour8.jpeg"
+          alt="Kigali city attractions" loading="lazy">
+        <div class="destination-content">
+          <span class="destination-tag">CITY & CULTURE</span>
+          <h3>Kigali City</h3>
+          <p class="destination-location">Kigali, Rwanda</p>
+          <p>Discover city attractions, museums, markets, and local experiences.</p>
+          <button class="destination-details" data-destination="kigali">
+            Explore destination →
+          </button>
+        </div>
+      </article>
+
+      <article class="destination-card" data-category="nature">
+        <img src="tour2.jpeg"
+          alt="Rwanda's green mountains" loading="lazy">
+        <div class="destination-content">
+          <span class="destination-tag">NATURE & ADVENTURE</span>
+          <h3>Rwanda's Mountain Landscapes</h3>
+          <p class="destination-location">Various regions of Rwanda</p>
+          <p>Discover scenic hills, mountain trails, and beautiful landscapes.</p>
+          <button class="destination-details" data-destination="mountains">
+            Explore destination →
+          </button>
+        </div>
+      </article>
+
+    </div>
+
+    <p id="destination-empty" hidden>No destinations match your search.</p>
+  </section>
+
+  <section class="destination-detail-panel" id="destination-panel" hidden>
+    <button id="destination-close" class="destination-close">Close ✕</button>
+    <span class="destination-tag">DESTINATION GUIDE</span>
+    <h2 id="destination-detail-title"></h2>
+    <p id="destination-detail-location"></p>
+    <p id="destination-detail-description"></p>
+    <h3>Things to experience</h3>
+    <ul id="destination-activities"></ul>
+    <a id="destination-booking" href="index.html#booking"
+      class="destination-book-link">Plan your trip →</a>
+  </section>
+
+</main>
+
+<footer class="destination-footer">
+  <p>© 2026 KABENDERA Tour Ltd. | Discover Rwanda</p>
+</footer>
+
+<script src="destinations.js"></script>
+</body>
+</html>

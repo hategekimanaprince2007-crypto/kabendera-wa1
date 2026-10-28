@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover Rwanda's wildlife, landscapes, culture and community experiences with KABENDERA Tour Ltd.">
+  <title>KABENDERA Tour Ltd. | Discover Rwanda</title>
+  <style>
+    :root{--forest:#173d32;--forest-dark:#102d25;--gold:#d8b777;--cream:#f7f5ef;--ink:#24332c;--muted:#68756d;--white:#fff}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:85px}
+    body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6;background:var(--cream)}
+    a{color:inherit}
+    .container{width:min(1120px,92%);margin-inline:auto}
+    .site-header{position:sticky;top:0;z-index:20;background:rgba(16,45,37,.97);color:#fff;box-shadow:0 3px 15px #0002}
+    .nav-wrap{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{text-decoration:none;font-weight:800;letter-spacing:1.2px;font-size:1.05rem;color:#fff}
+    .brand span{display:block;font-size:.68rem;font-weight:400;letter-spacing:3px;color:var(--gold)}
+    .nav-links{display:flex;align-items:center;gap:22px;list-style:none}
+    .nav-links a{text-decoration:none;font-size:.9rem;color:#f3f4f1}
+    .nav-links a:hover,.nav-links a:focus{color:var(--gold)}
+    .menu-toggle{display:none;border:1px solid #ffffff70;background:transparent;color:#fff;padding:8px 10px;border-radius:5px;font-size:1rem}
+    .hero{min-height:560px;display:grid;place-items:center;text-align:center;color:#fff;background:linear-gradient(#102d2585,#102d25b8),url('https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1800&q=85') center/cover}
+    .hero-content{padding:85px 0;max-width:820px}
+    .eyebrow{color:var(--gold);font-size:.75rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px}
+    h1{font-size:clamp(2.4rem,6vw,4.8rem);line-height:1.08;margin-bottom:22px}
+    h1 em,h2 em{font-family:Georgia,serif;font-weight:400}
+    .hero p{max-width:680px;margin:0 auto 30px;color:#f0f1ec;font-size:1.05rem}
+    .button{display:inline-block;text-decoration:none;border:0;border-radius:4px;padding:13px 21px;font-weight:700;cursor:pointer;transition:transform .2s,background .2s}
+    .button:hover{transform:translateY(-2px)}
+    .button-gold{background:var(--gold);color:var(--forest-dark)}
+    .button-outline{border:1px solid #ffffffaa;color:#fff;margin-left:8px}
+    section{padding:78px 0}
+    .section-heading{max-width:700px;margin-bottom:32px}
+    .section-heading h2{font-size:clamp(2rem,4vw,3rem);line-height:1.15;color:var(--forest);margin-bottom:15px}
+    .section-heading p{color:var(--muted)}
+    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}
+    .about-photo{width:100%;height:360px;object-fit:cover;border-radius:8px}
+    .about-copy p{margin:0 0 16px;color:var(--muted)}
+    .experience{background:var(--forest);color:#fff}
+    .experience .section-heading h2{color:#fff}
+    .experience .section-heading p{color:#cbd4cc}
+    .experience-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+    .experience-card{overflow:hidden;background:#fff;color:var(--ink);border-radius:8px;box-shadow:0 8px 25px #0001;transition:transform .25s,box-shadow .25s}
+    .experience-card:hover{transform:translateY(-5px);box-shadow:0 14px 30px #0003}
+    .experience-card img{display:block;width:100%;height:220px;object-fit:cover;background:#e3e7e2}
+    .experience-content{padding:21px}
+    .experience-number{font-size:.68rem;font-weight:800;letter-spacing:1.3px;color:#92733b}
+    .experience-content h3{font-size:1.2rem;color:var(--forest);margin:8px 0}
+    .experience-content p{font-size:.9rem;color:var(--muted);margin-bottom:14px}
+    .experience-link{font-size:.88rem;font-weight:800;color:var(--forest);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:4px}
+    .experience-link:hover{color:#92733b}
+    .culture-note{margin-top:25px;color:#d7e0d8;font-size:.9rem}
+    .booking{background:#eeece4}
+    .booking-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
+    .booking-aside{background:var(--forest);color:#fff;padding:28px;border-radius:8px}
+    .booking-aside h3{font-size:1.5rem;margin-bottom:12px}
+    .booking-aside p{color:#d7e0d8;margin-bottom:14px}
+    .booking-aside a{color:var(--gold)}
+    .booking-form{background:#fff;padding:28px;border-radius:8px;box-shadow:0 8px 24px #0000000a}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .field{margin-bottom:17px}
+    label{display:block;font-size:.88rem;font-weight:700;margin-bottom:6px;color:var(--forest)}
+    input,select,textarea{width:100%;font:inherit;padding:12px;border:1px solid #cbd2cc;border-radius:4px;background:#fff;color:var(--ink)}
+    textarea{min-height:115px;resize:vertical}
+    input:focus,select:focus,textarea:focus{outline:2px solid #d8b777;outline-offset:1px}
+    .form-message{margin-top:14px;font-size:.9rem;color:var(--forest);display:none}
+    .footer{background:var(--forest-dark);color:#fff;padding:35px 0}
+    .footer-main{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+    .footer p{color:#d2d9d3;font-size:.88rem}
+    .footer-bottom{border-top:1px solid #ffffff2b;margin-top:22px;padding-top:18px;display:flex;justify-content:space-between;gap:15px;font-size:.8rem;color:#cbd4cc}
+    @media(max-width:900px){.experience-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.about-grid,.booking-layout{grid-template-columns:1fr}.about-photo{height:300px}}
+    @media(max-width:650px){.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:var(--forest-dark);padding:18px 4%;flex-direction:column;align-items:flex-start;gap:16px}.nav-links.open{display:flex}.hero{min-height:500px}.hero-content{padding:65px 0}.button-outline{margin:10px 0 0}.experience-grid{grid-template-columns:1fr}.experience-card img{height:240px}section{padding:58px 0}.form-row{grid-template-columns:1fr;gap:0}.booking-form,.booking-aside{padding:21px}.footer-bottom{flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home">KABENDERA TOUR LTD.<span>DISCOVER RWANDA</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks">Menu ☰</button>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#experiences">Experiences</a></li><li><a href="#culture">Photo Sessions</a></li><li><a href="#booking">Book a Trip</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <p class="eyebrow">A thousand hills, countless stories</p>
+        <h1>Discover Rwanda.<br><em>Experience the extraordinary.</em></h1>
+        <p>Explore Rwanda's remarkable landscapes, wildlife, living traditions and welcoming communities with KABENDERA Tour Ltd.</p>
+        <a class="button button-gold" href="#experiences">Explore experiences</a>
+        <a class="button button-outline" href="#booking">Plan your journey</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <p class="eyebrow">Welcome to Rwanda</p>
+          <div class="section-heading"><h2>Travel deeper. <em>Connect meaningfully.</em></h2></div>
+          <p>KABENDERA Tour Ltd. invites visitors to discover Rwanda through nature, local experiences and cultural heritage.</p>
+          <p>From the beauty of Lake Kivu and forest adventures to traditional food, pottery, farming and dance, create a journey that reflects your interests.</p>
+          <a class="button button-gold" href="#booking">Start planning</a>
+        </div>
+        <img class="about-photo" src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1000&q=85" alt="Green landscape and wildlife in Africa" loading="lazy">
+      </div>
+    </section>
+
+    <section class="experience" id="experiences">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">Make it memorable</p><h2>Experiences beyond <em>the ordinary.</em></h2><p>Choose from nature, adventure, leisure and cultural experiences across Rwanda.</p></div>
+        <div class="experience-grid" id="generalExperiences"></div>
+      </div>
+    </section>
+
+    <section class="experience" id="culture" style="background:#102d25">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">Meet Rwanda through the lens</p><h2>10 cultural <em>photo sessions.</em></h2><p>Photograph traditional knowledge, everyday life, local food and community experiences with local hosts.</p></div>
+        <div class="experience-grid" id="cultureExperiences"></div>
+        <p class="culture-note">Cultural visits and photography should be arranged with local hosts. Always ask permission before photographing people, private spaces or cultural ceremonies.</p>
+      </div>
+    </section>
+
+    <section class="booking" id="booking">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">Your Rwanda journey starts here</p><h2>Plan your <em>experience.</em></h2><p>Send an enquiry about a tour or one of the cultural photography sessions.</p></div>
+        <div class="booking-layout">
+          <aside class="booking-aside"><h3>Let's plan together</h3><p>Tell us what you'd like to experience, your preferred dates and the number of travellers. The team can follow up to discuss arrangements.</p><p><strong>Tip:</strong> Choose a specific photography session in the form so your enquiry is clear.</p><p>Contact details: add your official email address and telephone number here before publishing.</p></aside>
+          <form class="booking-form" id="bookingForm">
+            <div class="form-row">
+              <div class="field"><label for="fullName">Full name *</label><input id="fullName" name="fullName" autocomplete="name" required></div>
+              <div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label for="phone">Phone number (optional)</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+              <div class="field"><label for="travelDate">Preferred date</label><input id="travelDate" name="travelDate" type="date"></div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label for="experienceSelect">Experience *</label><select id="experienceSelect" name="experience" required><option value="">Select an experience</option></select></div>
+              <div class="field"><label for="travellers">Number of travellers</label><select id="travellers" name="travellers"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select></div>
+            </div>
+            <div class="field"><label for="message">Tell us more</label><textarea id="message" name="message" placeholder="Your interests, questions, preferred location or any special requests"></textarea></div>
+            <button class="button button-gold" type="submit">Prepare enquiry</button>
+            <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main"><a class="brand" href="#home">KABENDERA TOUR LTD.<span>DISCOVER RWANDA</span></a><p>Discover Rwanda through nature, culture and community.</p></div>
+      <div class="footer-bottom"><span>© <span id="year"></span> KABENDERA Tour Ltd. All rights reserved.</span><span>Travel respectfully. Leave a positive impact.</span></div>
+    </div>
+  </footer>
+
+  <script>
+    // Update these image URLs with your own licensed photographs before publishing.
+    const generalExperiences = [
+      {number:'01',category:'WILDLIFE',title:'Gorilla Trekking',description:'Ask about guided mountain gorilla trekking arrangements and permits.',image:'https://images.unsplash.com/photo-1501706362039-c6e80948b5c5?auto=format&fit=crop&w=900&q=80'},
+      {number:'02',category:'NATURE',title:'Nyungwe Forest',description:'Explore rainforest scenery, biodiversity and forest adventures.',image:'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80'},
+      {number:'03',category:'LAKE & LEISURE',title:'Lake Kivu',description:'Enjoy lakeside views, relaxation and possible boat excursions.',image:'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80'},
+      {number:'04',category:'ADVENTURE',title:'Mountain Hiking',description:'Discover scenic trails and Rwanda’s green hills with a suitable guide.',image:'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80'},
+      {number:'05',category:'SAFARI',title:'Wildlife Safari',description:'Explore wildlife and natural landscapes in Rwanda’s protected areas.',image:'https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=900&q=80'},
+      {number:'06',category:'CITY & COMMUNITY',title:'Kigali City Tour',description:'Explore the capital’s landmarks, local businesses and city life.',image:'https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=900&q=80'}
+    ];
+
+    const cultureExperiences = [
+      {number:'01',category:'CULTURAL HERITAGE',title:'Rwandan Cultural Heritage',description:'Photograph traditional crafts, cultural heritage and stories shared by local hosts.',image:'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=80'},
+      {number:'02',category:'LOCAL FOOD',title:'Indigenous Foods',description:'Capture traditional ingredients, food preparation and local dishes.',image:'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80'},
+      {number:'03',category:'ARTISAN CRAFT',title:'Traditional Pottery',description:'Document artisans shaping clay and making traditional vessels.',image:'https://images.unsplash.com/photo-1565193298595-6c4a4a2a3e31?auto=format&fit=crop&w=900&q=80'},
+      {number:'04',category:'FARM LIFE',title:'Banana Picking',description:'Photograph banana harvesting and learn about its place in local farming and food traditions.',image:'https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=900&q=80'},
+      {number:'05',category:'BEEKEEPING',title:'Beekeeping and Honey',description:'Meet local beekeepers and photograph hive care and honey production from a safe distance.',image:'https://images.unsplash.com/photo-1587049352851-8d4e89133924?auto=format&fit=crop&w=900&q=80'},
+      {number:'06',category:'PERFORMANCE',title:'Traditional Dances',description:'Capture traditional dance, drumming and performance attire with participants’ permission.',image:'https://images.unsplash.com/photo-1504609813442-a8924e83f76e?auto=format&fit=crop&w=900&q=80'},
+      {number:'07',category:'HANDICRAFTS',title:'Basket Weaving and Handicrafts',description:'Photograph artisans weaving baskets and creating handmade crafts.',image:'https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=900&q=80'},
+      {number:'08',category:'HARVEST',title:'Harvesting Local Ingredients',description:'Explore local crops, seasonal produce and farm-to-table traditions.',image:'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80'},
+      {number:'09',category:'LIVESTOCK & RURAL LIFE',title:'Traditional Livestock Culture',description:'Learn about livestock and rural livelihoods while respecting farmers’ routines.',image:'https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=900&q=80'},
+      {number:'10',category:'COMMUNITY STORIES',title:'Community Life and Storytelling',description:'Create respectful portraits and document everyday community experiences with permission.',image:'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=900&q=80'}
+    ];
+
+    function createCard(item, isCulture=false) {
+      const article = document.createElement('article');
+      article.className = 'experience-card';
+      const img = document.createElement('img');
+      img.src = item.image;
+      img.alt = item.title;
+      img.loading = 'lazy';
+      img.onerror = () => { img.onerror = null; img.src = 'https://placehold.co/900x600/173d32/ffffff?text=' + encodeURIComponent(item.title); };
+      const content = document.createElement('div');
+      content.className = 'experience-content';
+      const number = document.createElement('span');
+      number.className = 'experience-number';
+      number.textContent = `${item.number} · ${item.category}`;
+      const heading = document.createElement('h3');
+      heading.textContent = item.title;
+      const description = document.createElement('p');
+      description.textContent = item.description;
+      const link = document.createElement('a');
+      link.className = 'experience-link';
+      link.href = '#booking';
+      link.textContent = 'Enquire about this experience ↗';
+      link.addEventListener('click', () => { document.getElementById('experienceSelect').value = item.title; });
+      content.append(number, heading, description, link);
+      article.append(img, content);
+      return article;
+    }
+
+    const generalGrid = document.getElementById('generalExperiences');
+    const cultureGrid = document.getElementById('cultureExperiences');
+    generalExperiences.forEach(item => generalGrid.appendChild(createCard(item)));
+    cultureExperiences.forEach(item => cultureGrid.appendChild(createCard(item, true)));
+
+    const experienceSelect = document.getElementById('experienceSelect');
+    [...generalExperiences, ...cultureExperiences].forEach(item => {
+      const option = document.createElement('option');
+      option.value = item.title;
+      option.textContent = item.title;
+      experienceSelect.appendChild(option);
+    });
+
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }));
+  </script>
+</body>
+</html>
